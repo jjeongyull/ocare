@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OCARE</title>
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/sub_style.css">
+
+	<!-- js -->
+	<script src="js/vendor/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	
+	<!-- font awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>	
+
+    
+	<!-- swiper -->
+	<script src="lib/swiper/swiper.min.js"></script>
+	<link rel="stylesheet" href="lib/swiper/swiper.min2.css">
+	<link rel="stylesheet" href="css/animate.css">
+	
+
+</head>
+
+<style>
+	.gtg_cont1_v2 .cont1_contents_right::before {
+		content: "작업 모습";
+	}
+	.gtg_cont1_v2 .cont1_contents_right::after {
+		display: none;
+	}
+
+	.sub_header{
+		color: #fff;
+		text-shadow: 0px 3px 15px #000;
+	}
+	.sub_body_padding {
+    padding: 64% 0%;
+    width: auto;
+    width: 100%;
+}
+	
+</style>
+<body>
+
+	<div class="Toggle-bar">
+		<div class="toggle-group">
+		  <div class="Toggle-icon">
+			<img src="images/icon/kakao.png" alt="">
+		  </div>
+		  <a href="https://pf.kakao.com/_fzuxfb/chat" onClick="window.open(this.href, '', 'width=400, height=630'); return false;" target="_blank">
+			<div class="Toggle-text">카카오톡 문의<br>
+			  <span style="font-weight: bold;">	<i class="fas fa-phone-alt"></i> 1600-0964</span>
+			</div>
+		  </a>
+		</div>
+	  </div>
+
+<!-- Sidebar -->
+<div id="mobile_header">
+
+	<div class="logo">
+		<!-- <img src="images/color_logo.png" alt=""> -->
+	</div>
+	
+	<span class="katalk"><img src="images/icon/kakao.png" alt="">
+		<a href="http://pf.kakao.com/_Nzvnb/chat" target="_blank">Ocare 카카오톡</a>
+	</span>
+	
+	<a href="javascript:view();" class="burger" onclick="check()">
+		<div class="ham">
+		<span class="bar1"></span>
+		<span class="bar2"></span>
+		<span class="bar3"></span>
+	  </div>
+	</a>
+
+</div>
+<div id="side_bg"></div>
+<section id="sidebar" class="sidebar scroll-3bar"></section>
+
+<div id="fullpage">
+	
+	<!-- header -->
+	<div class="sub_header header-contact">
+		<div class="sub_body_padding">
+			<div class="sub_title title_ani">CONTACT US</div>
+
+			<div class="root_icon title_ani_2"><i class="fas fa-home"></i>/<span>CONTACT US</span></div>
+		</div>
+	</div>
+
+	<script>
+
+		$(document).ready(function(){
+	
+			$('#button_type1').click(function(){
+	
+				var offset = $('#preId').offset(); //선택한 태그의 위치를 반환
+	
+					//animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 
+	
+				$('html').animate({scrollTop : offset.top},1000);
+	
+			});
+	
+		});
+	
+	</script>
+	
+
+	<div class="sub_body sub_body4">
+
+
+
+		<div class="sub_section animate-box">
+					
+			<form method="post" action="https://script.google.com/macros/s/AKfycbya47JE1BrIdXKu-PXzVXtdsF7wTksoOJ6HmxT6VswYWP2hyXg/exec" class="gform">
+				<div class="row" style="width: 90% !important">	
+					<div class="div_line">
+					<span>온라인 문의 <i class="far fa-question-circle"></i></span>
+					<div class="online">
+					<a href="https://pf.kakao.com/_fzuxfb/chat" target="_blank">
+						<div class="sub4_kakao">
+							
+								<span class="katalk"><img src="images/icon/kakao.png" alt="">
+								문의하기
+							</span>
+						</div>
+					</a>
+					<div class="sub4_kakao">
+							
+						<span class="katalk">
+							
+							<a href="tel:1600-0964"><i class="fas fa-mobile-alt" style="font-size: 17px; margin-right: 10px;"></i>1600-0964</a>
+					</span>
+				</div>
+					</div>
+					
+				</div>
+					
+					<div class="form-area fade-up1">
+
+						<div class="form-group">
+						<!-- 이름 -->
+							<div class="form-padding top-form">
+								<div class="form-group col-sm-6">
+									<div class="blind"><span>*</span> Name</div>
+									<input type="text" class="form-control name" id="name" name="이름" placeholder="이름을 작성해주세요."
+										onfocus="this.placeholder=''" onblur="this.placeholder='이름'" style="ime-mode:auto">
+								</div>
+							</div>
+				
+							<!-- 이메일 주소  -->
+							<div class="form-padding">
+								<div class="form-group col-sm-6">
+									<div class="blind"><span>*</span> EMAIL</div>
+									<input type="email" class="form-control email" id="userEmail" name="이메일" placeholder="이메일 주소를 입력해주세요."
+										onfocus="this.placeholder=''" onblur="this.placeholder='이메일 주소를 입력해주세요.'">
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group col-sm-6">
+							<div class="blind"><span>*</span> Phone</div>
+							<input type="text" class="form-control tel" id="phonenumber" name="전화번호" placeholder="예) 01012345678" maxlength="11" 
+							onfocus="this.placeholder=''" onblur="this.placeholder='예) 01012345678'" />
+							<div class="error-message checkPhone"></div>
+						</div>
+						
+						<div class="area">
+							<div class="blind"><span>*</span> 문의내용</div>
+							<textarea id="textarea" class="textarea" name="문의내용" cols="30" rows="10" ></textarea>
+						</div>
+						<div class="agreed-area">
+							[개인정보처리방침]<br>
+							다음과 같이 귀하의 개인정보를 수집, 이용합니다.
+							-수집항목: 성함, 전자우편주소 , 연락처 
+							-이용목적: 견적상담
+							-보유기간: 계약 완료후 파기(최대 3개월)
+							※ 귀하는 개인정보보호법에 따라 개인정보 수집·이용 동의를 거부하실 수 있으며, 거부시에는 문의메일 발송을 할 수 없습니다.
+							※ 귀하가 제공한 개인정보는 OCARE의 개인정보보호정책에 따라 안전하게 보관되며, 본 이벤트 종료 후 귀하로부터 제공받은 개인정보는 견적상담 이외에 제 3자에게 제공되거나 활용되지 아니합니다.<br>
+
+
+
+						</div>
+						<label for="checkbox" class="agreed" style="font-size: 12px; display: inline-block;">
+							<input type="checkbox" class="checkbox" id="checkbox" name="checkbox">개인정보 처리방침에 동의합니다.
+						</label>
+						<div class="submit-area">
+							<button type="submit" class="btn btn-primary" value="견적문의" >문의메일 보내기</button>
+							<div style="display:none" class="thankyou_message">
+								<h2>전송완료</h2>
+							</div>
+						</div>
+			
+					</div>
+				</div>
+			</form>
+		</div>
+
+
+
+	</div>
+	<div class="picture-line animate-box">
+		<div class="line-content">
+			확실한 청소, OCARE와 함께하세요.
+				</div>
+	</div>
+	<div class="section fp-auto-height" id="section3">
+	 
+		<div class="footer">
+		  <span>06140 서울 강남구 봉은사로30길 62 3층  (역삼동, 영우빌딩)</span><br>
+		  <span>대표 : 허연진</span>
+		  <span class="info-divider">|</span>
+		  <span>사업자등록번호 : 149-13-01191</span><br>
+		  <span class="call"><b>E-mail</b>. <a href="mailto:sh02choi@gmail.com">sh02choi@gmail.com</a></span><span class="call"><b>T</b>. 에어컨/홈케어 1600-0964</span><span class="call"><b>T</b>. 코로나방역 02-6012-0007</span>
+  
+		  <span class="CorpRight">Copyright © 오케어 홈크린. All Rights Reserved.</span>
+	  </div>
+	  </div>
+
+
+</div>
+
+</body>
+
+
+
+<!-- waypoint lib  -->
+<script src="lib/waypoints/jquery.waypoints.min.js"></script>
+<script src="lib/waypoints/jquery.flexslider-min.js"></script>
+<script src="lib/waypoints/jquery.countTo.js"></script>
+<script src="lib/waypoints/main.js"></script>
+
+<script data-cfasync="false" type="text/javascript"src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+<script>
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 10,
+      slidesPerView: 4,
+	  touchRatio: 0,
+      loopedSlides: 5, //looped slides should be the same
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+    });
+	
+    var galleryTop = new Swiper('.gallery-top', {
+      loop:true,
+	  spaceBetween: 30,
+	  //effect: "fade",
+      loopedSlides: 5, //looped slides should be the same
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+		
+      },
+      thumbs: {
+        swiper: galleryThumbs,
+      },
+    });
+  </script>
+
+</html>

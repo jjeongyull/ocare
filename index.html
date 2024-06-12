@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OCARE</title>
+
+	<!-- js -->
+	<!-- <script type="text/javascript" src="js/jquery.js"></script> -->
+  <script src="js/vendor/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+
+	<!-- font awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>	
+
+	<!-- swiper -->
+	<link rel="stylesheet" href="css/vendor/icomoon/style.css">
+  <link rel="stylesheet" href="css/vendor/bootstrap.css">
+
+  <!-- Theme Style -->
+  <link rel="stylesheet" href="css/style2.css">
+	
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" href="css/animate.css">
+
+	<!--lib-->
+	<!-- <link rel="stylesheet" type="text/css" href="css/swiper.css"> -->
+	
+  <!-- swiper -->
+	<link rel="stylesheet" tpye="text/css" href="lib/swiper/swiper.min.css">
+	<script src="lib/swiper/swiper.min.js"></script>
+
+  <!-- slick -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css'>
+  <link rel="stylesheet" href="./style3.css">
+
+</head>
+
+
+<style>
+
+input[type="submit"], input[type="reset"], input[type="button"], button, .button {
+    border: 2px solid transparent !important;
+}
+.slider-control button {
+        border: 2px solid #ffffff2c !important;
+        margin-right: 10px;
+    }
+    
+@media screen and (max-width:580px){
+  .slider-control button {
+        border: 2px solid #ffffff5e !important;
+        margin-right: 10px;
+    }
+    #three{
+      background-position: center !important;
+    }
+    #four{
+      background-position: right !important;
+      transform: scaleX(-1);
+    }
+    .slick-dots {
+    position: absolute;
+    top: 83%;
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    left: 50px;
+    list-style: none;
+    text-align: center;
+  }
+  .slick-dots button{
+    border: transparent !important;
+  }
+  .slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 16px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: .4;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: rgb(255, 255, 255);
+}
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: #ffffff00;
+}
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 0px;
+    margin-right: 10px !important;
+    padding: 0;
+    cursor: pointer;
+}
+.Toggle-bar {
+    display: none;
+}
+.overlay {
+    z-index: 1;
+    position: absolute;
+    height: 100vh;
+    width: 39%;
+    pointer-events: none;
+    left: 0px;
+    background: rgb(0 0 0 / 48%);
+    background: #11998e;
+    background: linear-gradient(to top, #000000c2, #00000000, #ffffff00);
+}
+}
+
+
+
+.container {
+  padding: 0 10px;
+}
+
+
+body {
+  overflow-x:auto;
+}
+
+.row {
+  margin: 0;
+}
+
+@media (min-width: 576px){
+.container {
+  min-width: 1140px !important;
+    width: 80%;
+    max-width: none;
+}
+
+
+}
+</style>
+
+
+
+<body id="fouc">
+
+
+<!-- 탑버튼 -->
+<!-- <div class="TopButton" id="moveTo">
+	<i class="fas fa-chevron-up"></i>
+</div> 
+
+<div class="ContactButton" id="ContactButton">
+	<i class="fas fa-phone-alt"></i>
+</div> -->
+
+<div class="Toggle-bar">
+  <div class="toggle-group">
+    <div class="Toggle-icon">
+      <img src="images/icon/kakao.png" alt="">
+    </div>
+    <a href="https://pf.kakao.com/_fzuxfb/chat" onClick="window.open(this.href, '', 'width=400, height=630'); return false;" target="_blank">
+      <div class="Toggle-text">카카오톡 문의<br>
+        <span style="font-weight: bold;">	<i class="fas fa-phone-alt"></i> 1600-0964</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<!-- Sidebar -->
+<div id="mobile_header">
+
+		<div class="logo">
+			<!-- <img src="images/color_logo.png" alt=""> -->
+		</div>
+		
+		<span class="katalk"><img src="images/icon/kakao.png" alt="">
+			<a href="https://pf.kakao.com/_fzuxfb/chat" target="_blank">Ocare 카카오톡</a>
+		</span>
+		
+		<a href="javascript:view();" class="burger" onclick="check()">
+			<div class="ham">
+			<span class="bar1"></span>
+			<span class="bar2"></span>
+			<span class="bar3"></span>
+		  </div>
+		</a>
+
+</div>
+<div id="side_bg"></div>
+<section id="sidebar" class="sidebar scroll-3bar"></section>
+
+
+<div id="fullpage">
+
+	<div id="untree_co--overlayer">
+		<div class="loader">
+      <div class="loading-container">
+        <div class="loading"></div>
+        <div id="loading-text">loading...</div>
+    </div>
+		</div>
+	</div>
+	
+    <div class="untree_co--site-wrap">
+
+      <div class="untree_co--site-main">
+      <div class="lib-slider">
+        <div class="text-slider-wrapper">
+          <div class="text-slider">
+                <div class="text-slide first-text-slide">
+                      <h1>OCARE</h1>
+                      <p>내 집보다 깨끗하게
+                        정성을 다한 클린 서비스로 <br>
+                        행복한 미소를 지어드리는 <span>Home care</span></p>
+                </div>
+                <div class="text-slide">
+                  <h1>LIFE CARE</h1>
+                  <p>
+                    청결한 청소, 건강한 관리를 동시에 만족하는 케어 서버스를 제공해 드리겠습니다.
+                  </p>
+                </div>
+                <div class="text-slide">
+                  <h1>HOME CARE</h1>
+                  <p>편안하고 깨끗한 공간은 몸과 마음의 ‘건강’과
+                    ‘행복함’으로 이어집니다</p>
+                </div>
+                <div class="text-slide">
+                  <h1>COVID - 19</h1>
+                  <p>
+                    코로나19 의 위험 속에서 ‘방역’ 은 필요합니다.<br>
+                    ‘전문가’ 에게 맡기시면 쉽고 빠릅니다.
+                  </p>
+                </div>
+          </div>
+    </div>
+
+    <div class="slider-control">
+          <div class="prev"><button type="button">
+                      <ion-icon name="arrow-back"></ion-icon>
+                </button></div>
+          <div class="next"><button type="button">
+                      <ion-icon name="arrow-forward"></ion-icon>
+                </button></div>
+    </div>
+
+    <div class="blocks">
+      
+          <div class="block-1"></div>
+          <div class="block-2">
+            <div class="marquee">
+              <div>
+                <span>You spin me right round, baby. Like a record, baby. You spin me right round,
+                  baby. Like a record, baby. You spin me right round, baby. Like a record,
+                  baby.</span>
+              </div>
+            </div>
+          </div>
+          <div class="block-3">
+            <div class="marquee">
+              <div>
+                <span>You spin me right round, baby. Like a record, baby. You spin me right round,
+                  baby. Like a record, baby. You spin me right round, baby. Like a record,
+                  baby.</span>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="overlay"></div>
+    <style>
+.image-slide {
+    background-size: cover;
+    background-position: center !important;
+}
+    </style>
+    <div class="image-slider">
+          <div class="image-slide" id="one" style="background-image: url(images/index_1.jpg);"></div>
+          <div class="image-slide" id="two" style="background-image: url(images/index_55.jpg)"></div>
+          <div class="image-slide" id="three" style="background-image: url(images/a2.jpg);"></div>
+          <div class="image-slide" id="four" style="background-image: url(images/covid_bg.jpg);"></div>
+    </div>
+  </div>
+        <div class="untree_co--site-section float-left pb-0 featured-rooms div-margin-top">
+
+          <div class="container pt-0 pb-5">
+            <div class="row justify-content-center text-center">  
+              <div class="col-lg-6 section-heading animate-box">
+                <h3 class="text-center">Ocare Home Clean</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-fluid pt-5">
+            <div class="suite-wrap overlap-image-1">
+
+              <div class="suite animate-box">
+                <div class="image-stack">
+                  <div class="image-stack-item image-stack-item-top" data-jarallax-element="-50">
+                    <div class="overlay"></div>
+                    <img src="images/index_2.jpg" alt="Image" class="img-fluid pic1">
+                  </div>
+                  <div class="image-stack-item image-stack-item-bottom">
+                    <div class="overlay"></div>
+                    <img src="images/index_22.jpg" alt="Image" class="img-fluid pic2">
+                  </div>
+                </div>
+              </div> <!-- .suite -->
+
+              <div class="suite-contents" data-jarallax-element="50">
+                <h2 class="suite-title1 animate-box">행복한 미소를 지어드리는 <br>홈케어
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left" class="svg-inline--fa fa-quote-left fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path></svg></h2>
+                <div class="animate-box">
+                  <p class="p-left-margin">체계적으로 관리되고 있는
+                    청소전문가가 전문장비를 갖추고
+                    현장으로 파견됩니다. <br>
+                    합리적인 비용과 수준 높은 서비스로
+                    만족도 높은 서비스를
+                    제공합니다. 1:1 배치된 담당 팀장님이
+                    직접 응대하여 고객님께
+                    빠르고 정확한 피드백을 드립니다.</p>
+                  <!-- <p><a href="#" class="readmore">Room Details</a></p> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="suite-wrap overlap-image-2">
+
+
+              <div class="suite-contents suite-margin-bottom  animate-box">
+                <h2 class="suite-title1">Ocare 에어컨 종합세척 <br>서비스로 안심케어 하세요
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left" class="svg-inline--fa fa-quote-left fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path></svg>
+                </h2>
+                <div class="animate-box pr-5 mobile-none">
+                  <p class="p-left-margin">
+                    청소를 하지 않아 에어컨 필터에 쌓인 먼지, 오염 물질은 오래 방치할 수 록
+                    우리 몸에 안 좋은 영향을 미칠 수 있습니다.<br>
+                    에어컨은 우리 생활에 밀접한 만큼 사용빈도가 높기 때문에 주기적으로 청결한 관리가 필요합니다.</p>
+                    <a href="sub1_1.html">
+                      <div id="button_type1" class="theme-btn-s2">Learn More</div>
+                    </a>
+                </div>
+              </div>
+              
+              <div class="Islide-area animate-box ">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                    <div class="img_index">
+                      <img src="images/main/icon_1.jpg" alt="">
+                      <div class="contents_area">
+                        <span class="contents_title">천정형 에어컨</span><br>
+                        <span class="contents_info">
+                          사무실에서 많이 사용하는 천정형 에어컨은 청결한 청소와 함께 기능의 원활한 작동 여부 체크도 중요합니다.</span><br>
+                          <a href="sub1_1.html">
+                            <span class="button_v2">Learn more</span>
+                          </a>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                    <div class="img_index">
+      
+                      <img src="images/main/icon_2.jpg" alt="">
+            
+                      <div class="contents_area">
+                        <span class="contents_title">벽걸이 에어컨</span>
+                        <span class="contents_info">
+                          가정이나 작은 공간에서 사용이 많은 벽걸이형 에어컨은 장시간 방치된 경우가 많아, 완전 분해하여 청소함과 동시에, 확실한 살균이 중요합니다.</span>
+                          <a href="sub1_2.html">
+                            <span class="button_v2">Learn more</span>
+                          </a>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                    <div class="img_index">
+      
+                      <img src="images/main/icon_3.jpg" alt="">
+            
+                      <div class="contents_area">
+                        <span class="contents_title">스탠드 에어컨</span>
+                        <span class="contents_info">
+                          업소와 가정 모두에서 많이 사용되는 스탠드형 에어컨! 그만큼 모델이 많기 때문에 숙련된 전문가의 케어가 필요합니다.</span>
+                        <a href="sub1_3.html">
+                          <span class="button_v2">Learn more</span>
+                        </a>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                    <div class="img_index">
+      
+                      <img src="images/main/icon_4.jpg" alt="">
+            
+                      <div class="contents_area">
+                        <span class="contents_title">실외기</span>
+                        <span class="contents_info">
+                          실외기 케어는 먼지로 인한 화재 위험, 냉각핀 곰팡이를 제거함으로서 기관지염 질병의 원인, 높은 전기료의 원인! 확실한 케어가 필요합니다.</span>
+                          <a href="sub1_4.html">
+                            <span class="button_v2">Learn more</span>
+                          </a>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                  <!-- Add Pagination -->
+                  <div class="swiper-pagination"></div>
+                  </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="untree_co--site-section">
+          <div class="container">
+            <div class="container pt-0 pb-5">
+            <div class="row justify-content-center text-center">  
+              <div class="col-lg-6 section-heading  animate-box">
+                <h3 class="text-center">Home Care</h3>
+                <span class="suite-title3">편안하고 깨끗한 공간은 몸과 마음의 ‘건강’과
+                  ‘행복함’으로 이어집니다</span>
+              </div>
+            </div>
+          </div>
+            <div class="row custom-row-02192 align-items-stretch">
+              <div class="col-md-6 col-lg-4 mb-5  animate-box">
+                <div class="media-29191 text-center h-100">
+                  <div class="media-29191-icon">
+                    <img src="images/icon/bad.png" alt="Image" class="img-fluid">
+                  </div>
+                  <h3>매트리스</h3>
+                  <!-- <p>건식&습식 집중 케어로 깨끗하고 건강한 휴식공간을!</p> -->
+                  <p><p><a href="sub2_1.html" class="readmore reverse">Read More</a></p></p>
+                </div>
+              </div>
+              
+              <div class="col-md-6 col-lg-4 mb-5 animate-box">
+                <div class="media-29191 text-center h-100">
+                  <div class="media-29191-icon">
+                    <img src="images/icon/sofa.png" alt="Image" class="img-fluid">
+                  </div>
+                  <h3>소파</h3>
+                  <!-- <p>집은 우리의 삶과 닿아있고 휴식을 주는 가장 중요한 공간입니다.
+                    오케어의 청소&관리 시스템은 공간의 청결함과 동시에 건강함까지 생각합니다.</p> -->
+                  <p><p><a href="sub2_2.html" class="readmore reverse">Read More</a></p></p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 mb-5 animate-box">
+                <div class="media-29191 text-center h-100">
+                  <div class="media-29191-icon">
+                    <img src="images/icon/capet.png" alt="Image" class="img-fluid">
+                  </div>
+                  <h3>카페트</h3>
+                  <!-- <p>집은 우리의 삶과 닿아있고 휴식을 주는 가장 중요한 공간입니다.
+                    오케어의 청소&관리 시스템은 공간의 청결함과 동시에 건강함까지 생각합니다.</p> -->
+                  <p><p><a href="sub2_3.html" class="readmore reverse">Read More</a></p></p>
+                </div>
+              </div>
+              
+              <div class="col-md-6 col-lg-4 mb-5 animate-box">
+                <div class="media-29191 text-center h-100">
+                  <div class="media-29191-icon">
+                    <img src="images2/svg/washing-machine.svg" alt="Image" class="img-fluid">
+                  </div>
+                  <h3>세탁기</h3>
+                  <!-- <p>집은 우리의 삶과 닿아있고 휴식을 주는 가장 중요한 공간입니다.</p> -->
+                  <p><p><a href="sub2_4.html" class="readmore reverse">Read More</a></p></p>
+                </div>
+              </div>
+              
+              <div class="col-md-6 col-lg-4 mb-5 animate-box">
+                <div class="media-29191 text-center h-100">
+                  <div class="media-29191-icon">
+                    <img src="images/icon/cold.png" alt="Image" class="img-fluid">
+                  </div>
+                  <h3>냉장고</h3>
+                  <!-- <p>집은 우리의 삶과 닿아있고 휴식을 주는 가장 중요한 공간입니다.</p> -->
+                  <p><p><a href="sub2_5.html" class="readmore reverse">Read More</a></p></p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 mb-5 animate-box">
+                <div class="media-29191 text-center h-100">
+                  <div class="media-29191-icon">
+                    <img src="images/icon/clean.png" alt="Image" class="img-fluid">
+                  </div>
+                  <h3>입주청소</h3>
+                  <!-- <p>집은 우리의 삶과 닿아있고 휴식을 주는 가장 중요한 공간입니다.</p> -->
+                  <p><p><a href="sub2_6.html" class="readmore reverse">Read More</a></p></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+        
+
+        <div class="untree_co--site-section">
+          <div class="container">
+            <div class="row m-margin">
+              <div class="col-md-4 section-heading animate-box">
+                <h3 class="text-left">Covid - 19 방역</h3>
+                <div class="w-75">
+                  <p>코로나19 의 위험 속에서 ‘방역’ 은 필요합니다.
+                    ‘전문가’ 에게 맡기시면 쉽고 빠릅니다.</p>
+                    
+                  </div>
+                  <a href="sub4.html">
+                    <span class="theme-btn-s2 index-ab">Learn more</span>
+                  </a>
+              </div>
+              <div class="col-md-4">
+                <div class="post-entry animate-box">
+                  <a href="#" class="thumb"><img src="images/section1_3.jpg" alt="Image" class="img-fluid"></a>
+               
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+   
+    </div>
+
+
+    <div class="section" id="section">
+      <div class="contact">
+        <div class="contact-right animate-box">
+          <div class="form_img">
+              <span class="form_title">Contact Us</span>
+              <span class="form_sub">걱정 하지 마세요.<br> <strong>Ocare</strong>가 도와 드리겠습니다</span>
+              <!-- <span class="form_sub2">내 집보다 깨끗하게 정성을 다한 클린 서비스로...</span> -->
+              <a href="sub4.html">
+                <div id="button_type1" class="theme-btn-s2">온라인 문의</div>
+              </a>
+          </div>
+        </div>
+      </div>
+      </div>
+
+	<div class="section fp-auto-height" id="section3">
+	 
+		<div class="footer">
+		  <span>06140 서울 강남구 봉은사로30길 62 3층  (역삼동, 영우빌딩)</span><br>
+		  <span>대표 : 허연진</span>
+		  <span class="info-divider">|</span>
+		  <span>사업자등록번호 : 149-13-01191</span><br>
+		  <span class="call"><b>E-mail</b>. <a href="mailto:sh02choi@gmail.com">sh02choi@gmail.com</a></span><span class="call"><b>T</b>. 에어컨/홈케어 1600-0964</span><span class="call"><b>T</b>. 코로나방역 02-6012-0007</span>
+  
+		  <span class="CorpRight">Copyright © 오케어 홈크린. All Rights Reserved.</span>
+	  </div>
+	  </div>
+
+
+</div>
+
+</body>
+
+  
+<script src="js/main2.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+
+<script src="js/vendor/jquery.lettering.js"></script>
+<script src="js/vendor/jquery.sticky.js"></script>
+
+<script src="js/vendor/TweenMax.min.js"></script>
+<script src="js/vendor/ScrollMagic.min.js"></script>
+<script src="js/vendor/scrollmagic.animation.gsap.min.js"></script>
+<script src="js/vendor/debug.addIndicators.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js'></script>
+<script src='https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js'></script>
+
+<script src="lib/waypoints/jquery.waypoints.min.js"></script>
+<script src="lib/waypoints/jquery.flexslider-min.js"></script>
+<script src="lib/waypoints/jquery.countTo.js"></script>
+<script src="lib/waypoints/main.js"></script>
+
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    //	  centeredSlides: true,
+    loop: true,
+    speed:1000,
+    loopAdditionalSlides : 1,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+    breakpoints: {
+        
+        580: {
+          slidesPerView:2,
+          spaceBetween: 30,
+        },
+        300: {
+          slidesPerView:1,
+          spaceBetween: 30,
+        },
+    
+      }
+    });
+
+</script>
+
+<script>
+  var sickPrimary = {
+        autoplay: true,
+        autoplaySpeed: 5000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 1800,
+        cssEase: 'cubic-bezier(.84, 0, .08, .99)',
+        asNavFor: '.text-slider',
+        centerMode: true,
+        dots : true,
+        prevArrow: $('.prev'),
+        draggable : false, 
+        nextArrow: $('.next'),
+  }
+
+  var sickSecondary = {
+        autoplay: true,
+        draggable : false, 
+        autoplaySpeed: 5000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 1800,
+        cssEase: 'cubic-bezier(.84, 0, .08, .99)',
+        asNavFor: '.image-slider',
+        prevArrow: $('.prev'),
+        nextArrow: $('.next'),
+  }
+
+  $('.image-slider').slick(sickPrimary);
+  $('.text-slider').slick(sickSecondary);
+</script>
+</html>

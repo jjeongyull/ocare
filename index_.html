@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>OCARE</title>
+    <meta name="author" content="Alvaro Trigo Lopez" />
+    <meta name="description" content="fullPage auto-height example." />
+    <meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,auto-height,full-screen" />
+    <meta name="Resource-type" content="Document" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="css/index.css">
+	
+	<!-- js -->
+	
+	<script type="text/javascript" src="js/ajax.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	
+	<!-- font awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>	
+
+    
+	<!-- fullpage lib -->
+    <script type="text/javascript" src="lib/fullpage/jquery.fullPage.js"></script>
+	<link rel="stylesheet" type="text/css" href="lib/fullpage/jquery.fullPage.css" />
+
+    <style>
+		.js #fouc {display: none}
+	</style>
+
+    <script type="text/javascript">
+		(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                verticalCentered: true,
+               navigation: true,
+               navigationPosition: 'right',
+			   scrollingSpeed:1000,
+			   keyboardScrolling: true,
+				animateAnchor: true,
+				recordHistory: true,
+				
+               'afterLoad': function(anchorLink, index){
+                if(index == 2){
+                  $('.first-active').click();
+                }
+	
+				
+              },
+            });
+        });
+		let vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+
+		
+    </script>
+
+
+</head>
+<style>
+body {
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
+</style>
+<body id="fouc">
+
+<!-- 탑버튼 -->
+<div class="TopButton" id="moveTo">
+	<i class="fas fa-chevron-up"></i>
+</div>
+
+<div class="ContactButton" id="ContactButton">
+	<i class="fas fa-phone-alt"></i>
+</div>
+
+
+<!-- Sidebar -->
+<div id="mobile_header">
+
+	<div class="logo">
+		<!-- <img src="images/color_logo.png" alt=""> -->
+	</div>
+	
+	<span class="katalk"><img src="images/icon/kakao.png" alt="">
+		<a href="http://pf.kakao.com/_Nzvnb/chat" target="_blank">Ocare 카카오톡</a>
+	</span>
+	
+	<a href="javascript:view();" class="burger" onclick="check()">
+		<div class="ham">
+		<span class="bar1"></span>
+		<span class="bar2"></span>
+		<span class="bar3"></span>
+	  </div>
+	</a>
+
+</div>
+<div id="side_bg"></div>
+<section id="sidebar" class="sidebar"></section>
+	
+	</section>
+
+<div id="fullpage">
+
+    <div class="section" id="section0" style="background-image: url(images/index_3.jpg);">
+        	<section id="intro">
+			
+	
+				  
+					
+						
+						<div class="Scroll_icon">
+							<i class="fas fa-mouse"></i><br>
+							<span>SCROLL DOWN</span>
+						</div>
+			</section>
+    </div>
+
+
+    <div class="section" id="section0" style="background-image: url(images/index_2.jpg);">
+	
+    </div>
+
+	<div class="section" id="section2" style="background-image: url(images/index_1.jpg);">
+
+	  </div>
+
+	  <div class="section" id="section">
+		<div class="contact">
+			<div class="contact-right">
+				<div class="form_img">
+						<span>Contact Us</span>
+						<span>걱정 하지 마세요.<br> <strong>Ocare</strong>가 도와 드리겠습니다</span>
+						<!-- <span>전화문의</span>
+						<span>00-0000-0000</span> -->
+				</div>
+				<form method="post" action="https://script.google.com/macros/s/AKfycbya47JE1BrIdXKu-PXzVXtdsF7wTksoOJ6HmxT6VswYWP2hyXg/exec" class="gform">
+					<div class="row">	
+						<div class="form-area">
+	
+							<div class="form-group">
+							<!-- 이름 -->
+								<div class="form-padding top-form">
+									<div class="form-group col-sm-6">
+										<div class="blind"><span>*</span> Name</div>
+										<input type="text" class="form-control name" id="name" name="이름" placeholder="이름을 작성해주세요."
+											onfocus="this.placeholder=''" onblur="this.placeholder='이름'" style="ime-mode:auto">
+									</div>
+								</div>
+					
+								<!-- 이메일 주소  -->
+								<div class="form-padding">
+									<div class="form-group col-sm-6">
+										<div class="blind"><span>*</span> EMAIL</div>
+										<input type="email" class="form-control email" id="userEmail" name="이메일" placeholder="이메일 주소를 입력해주세요."
+											onfocus="this.placeholder=''" onblur="this.placeholder='이메일 주소를 입력해주세요.'">
+									</div>
+								</div>
+							</div>
+	
+							<div class="form-group col-sm-6">
+								<div class="blind"><span>*</span> Phone</div>
+								<input type="text" class="form-control tel" id="phonenumber" name="전화번호" placeholder="예) 01012345678" maxlength="11" 
+								onfocus="this.placeholder=''" onblur="this.placeholder='예) 01012345678'" />
+								<div class="error-message checkPhone"></div>
+							</div>
+							
+							<div class="area">
+								<div class="blind"><span>*</span> 문의내용</div>
+								<textarea id="textarea" class="textarea" name="문의내용" cols="30" rows="10" ></textarea>
+							</div>
+							<div class="agreed-area">
+								[개인정보처리방침]<br>
+								다음과 같이 귀하의 개인정보를 수집, 이용합니다.
+								-수집항목: 성함, 전자우편주소 , 연락처 
+								-이용목적: 견적상담
+								-보유기간: 계약 완료후 파기(최대 3개월)
+								※ 귀하는 개인정보보호법에 따라 개인정보 수집·이용 동의를 거부하실 수 있으며, 거부시에는 문의메일 발송을 할 수 없습니다.
+								※ 귀하가 제공한 개인정보는 OCARE의 개인정보보호정책에 따라 안전하게 보관되며, 본 이벤트 종료 후 귀하로부터 제공받은 개인정보는 견적상담 이외에 제 3자에게 제공되거나 활용되지 아니합니다.<br>
+	
+	
+	
+							</div>
+							<label for="checkbox" class="agreed" style="font-size: 12px; display: inline-block;">
+								<input type="checkbox" class="checkbox" id="checkbox" name="checkbox">개인정보 처리방침에 동의합니다.
+							</label>
+							<div class="submit-area">
+								<button type="submit" class="btn btn-primary" value="견적문의" >문의메일 보내기</button>
+								<div style="display:none" class="thankyou_message">
+									<h2>전송완료</h2>
+								</div>
+							</div>
+				
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+    </div>
+    <div class="section" id="section">
+		<div class="contact">
+			<div class="contact-right">
+				<div class="form_img">
+						<span>Contact Us</span>
+						<span>걱정 하지 마세요.<br> <strong>Ocare</strong>가 도와 드리겠습니다</span>
+						<!-- <span>전화문의</span>
+						<span>00-0000-0000</span> -->
+				</div>
+				<form method="post" action="https://script.google.com/macros/s/AKfycbya47JE1BrIdXKu-PXzVXtdsF7wTksoOJ6HmxT6VswYWP2hyXg/exec" class="gform">
+					<div class="row">	
+						<div class="form-area">
+	
+							<div class="form-group">
+							<!-- 이름 -->
+								<div class="form-padding top-form">
+									<div class="form-group col-sm-6">
+										<div class="blind"><span>*</span> Name</div>
+										<input type="text" class="form-control name" id="name" name="이름" placeholder="이름을 작성해주세요."
+											onfocus="this.placeholder=''" onblur="this.placeholder='이름'" style="ime-mode:auto">
+									</div>
+								</div>
+					
+								<!-- 이메일 주소  -->
+								<div class="form-padding">
+									<div class="form-group col-sm-6">
+										<div class="blind"><span>*</span> EMAIL</div>
+										<input type="email" class="form-control email" id="userEmail" name="이메일" placeholder="이메일 주소를 입력해주세요."
+											onfocus="this.placeholder=''" onblur="this.placeholder='이메일 주소를 입력해주세요.'">
+									</div>
+								</div>
+							</div>
+	
+							<div class="form-group col-sm-6">
+								<div class="blind"><span>*</span> Phone</div>
+								<input type="text" class="form-control tel" id="phonenumber" name="전화번호" placeholder="예) 01012345678" maxlength="11" 
+								onfocus="this.placeholder=''" onblur="this.placeholder='예) 01012345678'" />
+								<div class="error-message checkPhone"></div>
+							</div>
+							
+							<div class="area">
+								<div class="blind"><span>*</span> 문의내용</div>
+								<textarea id="textarea" class="textarea" name="문의내용" cols="30" rows="10" ></textarea>
+							</div>
+							<div class="agreed-area">
+								[개인정보처리방침]<br>
+								다음과 같이 귀하의 개인정보를 수집, 이용합니다.
+								-수집항목: 성함, 전자우편주소 , 연락처 
+								-이용목적: 견적상담
+								-보유기간: 계약 완료후 파기(최대 3개월)
+								※ 귀하는 개인정보보호법에 따라 개인정보 수집·이용 동의를 거부하실 수 있으며, 거부시에는 문의메일 발송을 할 수 없습니다.
+								※ 귀하가 제공한 개인정보는 OCARE의 개인정보보호정책에 따라 안전하게 보관되며, 본 이벤트 종료 후 귀하로부터 제공받은 개인정보는 견적상담 이외에 제 3자에게 제공되거나 활용되지 아니합니다.<br>
+	
+	
+	
+							</div>
+							<label for="checkbox" class="agreed" style="font-size: 12px; display: inline-block;">
+								<input type="checkbox" class="checkbox" id="checkbox" name="checkbox">개인정보 처리방침에 동의합니다.
+							</label>
+							<div class="submit-area">
+								<button type="submit" class="btn btn-primary" value="견적문의" >문의메일 보내기</button>
+								<div style="display:none" class="thankyou_message">
+									<h2>전송완료</h2>
+								</div>
+							</div>
+				
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+    </div>
+
+    <div class="section fp-auto-height" id="section3">
+	 
+      <div class="footer">
+        <span>06140 서울 강남구 봉은사로30길 62 3층  (역삼동, 영우빌딩)</span><br>
+        <span>대표 : 허연진</span>
+        <span class="info-divider">|</span>
+        <span>사업자등록번호 : 149-13-01191</span><br>
+        <span class="call"><b>E-mail</b>. <a href="mailto:sh02choi@gmail.com">sh02choi@gmail.com</a></span><span class="call"><b>T</b>. 에어컨/홈케어 1600-0964</span><span class="call"><b>T</b>. 코로나방역 02-6012-0007</span>
+
+		<span class="CorpRight">Copyright © 오케어 홈크린. All Rights Reserved.</span>
+    </div>
+    </div>
+
+</div>
+
+</body>
+<script data-cfasync="false" type="text/javascript"src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+<script scr="text/javascript">
+  $(function(){
+	var target2 = $('.cards');
+		target2.click(function() {
+              $(this).addClass("active");
+              target2.not($(this)).removeClass("active");
+          });
+	});
+
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js'></script>
+<script>
+
+   document.getElementById("fouc").style.display="block"
+
+</script>
+
+</html>

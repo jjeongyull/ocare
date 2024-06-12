@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OCARE</title>
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/sub_style.css">
+
+	<!-- js -->
+	<script src="js/vendor/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	
+	<!-- font awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>	
+
+    
+	<!-- swiper -->
+	<script src="lib/swiper/swiper.min.js"></script>
+	<link rel="stylesheet" href="lib/swiper/swiper.min2.css">
+	<link rel="stylesheet" href="css/animate.css">
+	
+
+</head>
+
+<body>
+
+	<div class="Toggle-bar">
+		<div class="toggle-group">
+		  <div class="Toggle-icon">
+			<img src="images/icon/kakao.png" alt="">
+		  </div>
+		  <a href="https://pf.kakao.com/_fzuxfb/chat" onClick="window.open(this.href, '', 'width=400, height=630'); return false;" target="_blank">
+			<div class="Toggle-text">카카오톡 문의<br>
+			  <span style="font-weight: bold;">	<i class="fas fa-phone-alt"></i> 1600-0964</span>
+			</div>
+		  </a>
+		</div>
+	  </div>
+
+<!-- Sidebar -->
+<div id="mobile_header">
+
+	<div class="logo">
+		<!-- <img src="images/color_logo.png" alt=""> -->
+	</div>
+	
+	<span class="katalk"><img src="images/icon/kakao.png" alt="">
+		<a href="http://pf.kakao.com/_Nzvnb/chat" target="_blank">Ocare 카카오톡</a>
+	</span>
+	
+	<a href="javascript:view();" class="burger" onclick="check()">
+		<div class="ham">
+		<span class="bar1"></span>
+		<span class="bar2"></span>
+		<span class="bar3"></span>
+	  </div>
+	</a>
+
+</div>
+<div id="side_bg"></div>
+<section id="sidebar" class="sidebar scroll-3bar"></section>
+
+<div id="fullpage">
+	
+	<!-- header -->
+	<div class="sub_header header-02-1">
+		<div class="sub_body_padding">
+			<div class="sub_title title_ani">매트리스</div>
+			<div class="sub_title_2 title_ani">LIFE CARE는<br>오케어와 청결하고 건강하게 홈케어 하세요!</div>
+			<div class="root_icon title_ani_2"><i class="fas fa-home"></i>/<span>Home care</span>/<span class="icon_active">매트리스</span></div>
+		</div>
+	</div>
+	<div class="sub_tab animate-box">
+		<ul>
+			<a href="sub2_1.html">
+				<li class="sub2-li active">매트리스</li>
+			</a>
+			<a href="sub2_2.html">
+				<li class="sub2-li">소파</li>
+			</a>
+			<a href="sub2_3.html">
+				<li class="sub2-li">카페트</li>
+			</a>
+			<a href="sub2_4.html">
+				<li class="sub2-li">세탁기</li>
+			</a>
+			<a href="sub2_5.html">
+				<li class="sub2-li">냉장고</li>
+			</a>
+			<a href="sub2_6.html">
+				<li class="sub2-li">입주청소</li>
+			</a>
+		</ul>
+	</div>
+	<script>
+
+		$(document).ready(function(){
+	
+			$('#button_type1').click(function(){
+	
+				var offset = $('#preId').offset(); //선택한 태그의 위치를 반환
+	
+					//animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 
+	
+				$('html').animate({scrollTop : offset.top},1000);
+	
+			});
+	
+		});
+	
+	</script>
+	
+
+	<div class="sub_body">
+		<div class="sub_section sub_1 ">
+			<!-- <div class="sub_section_title">천정형 에어컨
+				<div class="sub_section_title_1">사무실에서 많이 사용하는 천정형 에어컨은 청결한 청소와 함께 기능의 원활한 작동 여부 체크도 중요합니다.</div>
+			</div> -->
+			<div class="gtg_cont1">
+				<div class="cont1_contents  animate-box">
+					
+					<div class="cont1_contents_left">
+						<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left" class="svg-inline--fa fa-quote-left fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path></svg>
+						<span>편안하고 깨끗한 공간은<br> 몸과 마음의 ‘건강’과
+							‘행복함’으로..</span><br>
+						<span>집은 우리의 삶과 닿아있고 휴식을 주는 가장 중요한 공간입니다.<br>
+							오케어의 청소&관리 시스템은 공간의 청결함과 동시에 건강함까지 생각합니다.
+							
+							고객님의 행복한 삶을 위해서 저희 오케어는 더욱 성장하며 좋은 서비스를 제공해 드리겠습니다.</span><br>
+						<div id="button_type1" class="theme-btn-s2">견적 바로가기</div>
+					</div>
+					<div class="cont1_contents_right">
+						<img src="images/sub2/a_1.jpg" alt="" >
+					</div>
+				</div>
+		
+			
+			</div>
+		</div>
+
+	
+	
+			<div class="cont1_contents g2">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left" class="svg-inline--fa fa-quote-left fa-w-16 g2_svg" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path></svg>
+				<div class="g2_cont_title animate-box">이제 Ocare 홈케어 라이프케어 서비스로
+					안심케어 하세요<br>
+				<span>Ocare 홈케어 라이프케어 서비스는<br>차별화된 기술, 혁신적인 시스템으로 여러분들께 청결과 건강을 동시에 만족시켜드립니다.</span>
+				</div>
+		
+	
+				<div class="g2_con animate-box">
+					<ul>
+						<li>
+						<div class="g2_img_area"></div>
+						<div class="g2_text_area">
+							<span class="g2_con_title"><span>1</span> 매트리스 상태점검</span>
+						</div>
+						</li>
+	
+						<li>
+							<div class="g2_img_area"></div>
+							<div class="g2_text_area">
+								<span class="g2_con_title"><span>2</span> 프레임 매트리스분리</span>
+							</div>
+						</li>
+	
+						<li>
+							<div class="g2_img_area"></div>
+							<div class="g2_text_area">
+								<span class="g2_con_title"><span>3</span> 매트리스 6면청소 건식청소</span>
+							</div>
+						</li>
+					</ul>
+					<ul>
+						<li>
+						<div class="g2_img_area"></div>
+						<div class="g2_text_area">
+							<span class="g2_con_title"><span>4</span> 오염부위 확인</span>
+						</div>
+						</li>
+	
+						<li>
+							<div class="g2_img_area"></div>
+							<div class="g2_text_area">
+								<span class="g2_con_title"><span>6</span> 약품처리후 습식청소</span>
+							</div>
+						</li>
+	
+						<li>
+							<div class="g2_img_area"></div>
+							<div class="g2_text_area">
+								<span class="g2_con_title"><span>6</span> 피톤치드 향균 시공</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+	
+	
+
+	
+		<div class="img-full img-full-sub01 img-full-a">
+			<div class="img-full-info">
+				<div class="sub_section_title animate-box">
+					<span>전문 세척 효과</span>
+					<div class="sub_section_title_1">사무실에서 많이 사용하는 천정형 에어컨은 청결한 청소와 함께 기능의 원활한 작동 여부 체크도 중요합니다.</div>
+				</div>
+				<div class="img-full-cont">
+					<div class="cont1_box animate-box ">
+						<div class="box_content">
+							<img src="images/icon/icon_1.png" alt=""><br>
+							<span>삶의 질 향상</span>
+							<span>깨끗한 주변은 삶의 향상으로 이어집니다.</span>
+						</div>
+					</div>
+					<div class="cont1_box animate-box">
+						<div class="box_content">
+							<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shield-virus" class="svg-inline--fa fa-shield-virus fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M224,192a16,16,0,1,0,16,16A16,16,0,0,0,224,192ZM466.5,83.68l-192-80A57.4,57.4,0,0,0,256.05,0a57.4,57.4,0,0,0-18.46,3.67l-192,80A47.93,47.93,0,0,0,16,128C16,326.5,130.5,463.72,237.5,508.32a48.09,48.09,0,0,0,36.91,0C360.09,472.61,496,349.3,496,128A48,48,0,0,0,466.5,83.68ZM384,256H371.88c-28.51,0-42.79,34.47-22.63,54.63l8.58,8.57a16,16,0,1,1-22.63,22.63l-8.57-8.58C306.47,313.09,272,327.37,272,355.88V368a16,16,0,0,1-32,0V355.88c0-28.51-34.47-42.79-54.63-22.63l-8.57,8.58a16,16,0,0,1-22.63-22.63l8.58-8.57c20.16-20.16,5.88-54.63-22.63-54.63H128a16,16,0,0,1,0-32h12.12c28.51,0,42.79-34.47,22.63-54.63l-8.58-8.57a16,16,0,0,1,22.63-22.63l8.57,8.58c20.16,20.16,54.63,5.88,54.63-22.63V112a16,16,0,0,1,32,0v12.12c0,28.51,34.47,42.79,54.63,22.63l8.57-8.58a16,16,0,0,1,22.63,22.63l-8.58,8.57C329.09,189.53,343.37,224,371.88,224H384a16,16,0,0,1,0,32Zm-96,0a16,16,0,1,0,16,16A16,16,0,0,0,288,256Z"></path></svg><br>
+							<span>각종 질병 예방</span>
+							<span>곰팡이, 진드기 등과 여러 병균을 제거하여 아토피, 알레르기성 비염, 천식 등을 예방합니다.</span>
+						</div>
+					</div>
+					<div class="cont1_box animate-box">
+						<div class="box_content ">
+							<img src="images/icon/icon_1.png" alt=""><br>
+							<span>관리비 절감</span>
+							<span>전기료를 낮추고, 수명을 증가 시키므로 전체적인 관리비가 절감됩니다.</span>
+						</div>
+					</div>
+					<div class="cont1_box animate-box">
+						<div class="box_content">
+							<!-- <img src="images/icon/icon_1.png" alt=""><br> -->
+							<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="smile-wink" class="svg-inline--fa fa-smile-wink fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M0 256c0 137 111 248 248 248s248-111 248-248S385 8 248 8 0 119 0 256zm200-48c0 17.7-14.3 32-32 32s-32-14.3-32-32 14.3-32 32-32 32 14.3 32 32zm158.5 16.5c-14.8-13.2-46.2-13.2-61 0L288 233c-8.3 7.4-21.6.4-19.8-10.8 4-25.2 34.2-42.1 59.9-42.1S384 197 388 222.2c1.7 11.1-11.4 18.3-19.8 10.8l-9.7-8.5zM157.8 325.8C180.2 352.7 213 368 248 368s67.8-15.4 90.2-42.2c13.6-16.2 38.1 4.2 24.6 20.5C334.3 380.4 292.5 400 248 400s-86.3-19.6-114.8-53.8c-13.5-16.3 11.2-36.7 24.6-20.4z"></path></svg><br>
+							<span>고객 만족</span>
+							<span>쾌적하고 시원한 바람으로 크리닝 후 고객님들의 만족도가 매우 높습니다.</span>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	
+
+		<div class="sub_section sub_1 "  id="preId">
+			<!-- <div class="sub_section_title">천정형 에어컨
+				<div class="sub_section_title_1">사무실에서 많이 사용하는 천정형 에어컨은 청결한 청소와 함께 기능의 원활한 작동 여부 체크도 중요합니다.</div>
+			</div> -->
+			<div class="gtg_cont1 gtg_cont1_v2">
+				<div class="cont1_contents  animate-box">
+					
+					<div class="cont1_contents_right">
+						<div class="swiper-container gallery-top">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="images/sub2/a_view_1.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="images/sub2/a_view_2.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="images/sub2/a_view_3.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="images/sub2/a_view_4.jpg" alt="">
+								</div>
+							</div>
+							<!-- Add Arrows -->
+							<div class="swiper-button-next swiper-button-white"></div>
+							<div class="swiper-button-prev swiper-button-white"></div>
+						  </div>
+					
+						
+					</div>
+					<div class="cont1_contents_left v2_cont1">
+						<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left" class="svg-inline--fa fa-quote-left fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path></svg>
+						<span>눈으로 보고<br>Ocare를 선택하세요</span><br>
+						<span>사무실에서 많이 사용하는 천정형 에어컨은 청결한 청소와 함께 <br>기능의 원활한 작동 여부 체크도 중요합니다.</span>
+						<div class="swiper-container gallery-thumbs">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" style="background-image:url(./images/sub2/a_view_1.jpg)"></div>
+								<div class="swiper-slide" style="background-image:url(./images/sub2/a_view_2.jpg)"></div>
+								<div class="swiper-slide" style="background-image:url(./images/sub2/a_view_3.jpg)"></div>
+								<div class="swiper-slide" style="background-image:url(./images/sub2/a_view_4.jpg)"></div>
+							</div>
+						  </div>
+					</div>
+				</div>
+		
+			
+			</div>
+		</div>
+
+		<div class="sub_section">
+			<div class="cont1_contents g3 animate-box">
+				<span>매트리스 청소 견적 안내 <i class="far fa-question-circle"></i></span>
+				<div class="g3_area">
+					<table>
+						<tr>
+							<td style="width: 20%;">싱글 건식 </td>
+							<td>50,000 <p>(단위: 원)</p></td>
+						</tr>
+						<tr>
+							<td>싱글 습식  </td>
+							<td>80.000 <p>(단위: 원)</p></td>
+						</tr>
+						<tr>
+							<td>퀸 건식</td>
+							<td>60.000<p>(단위: 원)</p></td>
+						</tr>
+						<tr>
+							<td>퀸 습식 </td>
+							<td>100.000 <p>(단위: 원)</p></td>
+						</tr>
+						<tr>
+							<td>킹 건식</td>
+							<td>65.000 <p>(단위: 원)</p></td>
+						</tr>
+						<tr>
+							<td>킹 습식 </td>
+							<td>120.000 <p>(단위: 원)</p></td>
+						</tr>
+					</table>
+					<div class="g3_info">>
+						* 위 금액은 현금가이며, 부가세 별도입니다.<br>
+						* 고난이도 작업 시, 추가 비용이 발생할 수 있습니다. (외부 사다리 작업 등)<br>
+					</div>
+					<a href="sub4.html" class="theme-btn-s2">문의 바로가기</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section fp-auto-height" id="section3">
+	 
+		<div class="footer">
+		  <span>06140 서울 강남구 봉은사로30길 62 3층  (역삼동, 영우빌딩)</span><br>
+		  <span>대표 : 허연진</span>
+		  <span class="info-divider">|</span>
+		  <span>사업자등록번호 : 149-13-01191</span><br>
+		  <span class="call"><b>E-mail</b>. <a href="mailto:sh02choi@gmail.com">sh02choi@gmail.com</a></span><span class="call"><b>T</b>. 에어컨/홈케어 1600-0964</span><span class="call"><b>T</b>. 코로나방역 02-6012-0007</span>
+  
+		  <span class="CorpRight">Copyright © 오케어 홈크린. All Rights Reserved.</span>
+	  </div>
+	  </div>
+
+
+</div>
+
+</body>
+
+
+
+<!-- waypoint lib  -->
+<script src="lib/waypoints/jquery.waypoints.min.js"></script>
+<script src="lib/waypoints/jquery.flexslider-min.js"></script>
+<script src="lib/waypoints/jquery.countTo.js"></script>
+<script src="lib/waypoints/main.js"></script>
+
+
+<script>
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 10,
+      slidesPerView: 4,
+	  touchRatio: 0,
+      loopedSlides: 5, //looped slides should be the same
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+    });
+	
+    var galleryTop = new Swiper('.gallery-top', {
+      loop:true,
+	  spaceBetween: 30,
+	  //effect: "fade",
+      loopedSlides: 5, //looped slides should be the same
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+		
+      },
+      thumbs: {
+        swiper: galleryThumbs,
+      },
+    });
+  </script>
+
+</html>

@@ -1,0 +1,24 @@
+<p align="center"> 
+<img alt="ICT산업 Hot Clips Vol.65 Information &amp; Communication Technology NEWS LETTER-2021.06.15" src="https://www.kca.kr/hot_clips/vol65/img/newsletter_65.jpg" width="1024" height="1460" usemap="#map">
+             <map name="map" id="map">
+                <area target="_blank" alt="ICT Trend" title="새창" href="https://www.kca.kr/hot_clips/vol65/index.html" coords="85,75,520,145" shape="rect">                 
+               
+                <area target="_blank" alt="ICT Insight SaaW 기반 Industrial Servcice의 확산" title="새창" href="https://www.kca.kr/hot_clips/vol65/sub01.html" coords="85,275,355,535" shape="rect">
+                <area target="_blank" alt="ICT Station 디지털뉴딜의 치열한 콜로세움! 디지털 헬스 산업의 국내외 동향 분석" title="새창" href="https://www.kca.kr/hot_clips/vol65/sub02.html" coords="375,275,645,535" shape="rect">
+	            <area target="_blank" alt="ICT Espresso ICT 9개분야 최신 동향" title="새창" href="https://www.kca.kr/hot_clips/vol65/sub03.html" coords="665,275,935,535" shape="rect"> 
+               
+                <area target="_blank" alt="줌 인 인터뷰 (주)더존비즈온/(주)에니트/인포보스(주)/(주)일루니" title="새창" href="https://www.kca.kr/hot_clips/vol65/sub04_1.html" coords="85,705,285,965" shape="rect">
+                <area target="_blank" alt="알리고 ICT 기금사업이란?" title="새창" href="https://www.kca.kr/hot_clips/vol65/sub05.html" coords="305,705,505,965" shape="rect">
+	            <area target="_blank" alt="ICT 만화경 디지털뉴딜이란?" title="새창" href="https://www.kca.kr/hot_clips/vol65/sub06.html" coords="520,705,720,965" shape="rect">
+                <area target="_blank" alt="독자마당 ICT산업 Hot Clips Vol.65 뉴스레터 구독 이벤트" title="새창" href="https://www.kca.kr/hot_clips/vol65/sub08.html" coords="740,705,935,965" shape="rect">
+               
+               	<area target="_blank" alt="일자리 정책 및 뉴스" title="새창" href="https://www.kca.kr/hot_clips/vol65/sub09.html" coords="85,1100,505,1300" shape="rect">
+                <area target="_blank" alt="Cood Job" title="새창" href="https://www.kca.kr/hot_clips/vol65/sub10.html" coords="520,1100,935,1300" shape="rect">
+                
+                <area target="_blank" alt="kca 한국방송통신전파진흥원" title="새창" href="https://www.kca.kr/" coords="60,1390,275,1420" shape="rect">
+                <area target="_blank" alt="kca 페이스북" title="새창" href="https://www.facebook.com/prkca" coords="830,1390,855,1420" shape="rect">
+                <area target="_blank" alt="kca 유튜브" title="새창" href="https://www.youtube.com/channel/UC4C85-yZqS_ba1Q1p-_welw?view_as=subscriber" coords="870,1390,895,1420" shape="rect">
+                <area target="_blank" alt="kca 인스타" title="새창" href="https://www.instagram.com/korea_communications_agency/" coords="913,1390,938,1420" shape="rect">
+
+               </map>
+</p>

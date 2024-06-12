@@ -1,0 +1,112 @@
+<script>
+
+
+  $(function () {
+
+  
+  //회전 아이콘 
+  if ($(".category")) {
+      var active = "active";
+      $(".category").click(function () {
+  
+        var remove = this;
+        $('.category').each(function (_, item_01) {
+          if (remove !== this) $(item_01).removeClass(active);
+  
+        });
+        $(this).toggleClass(active);
+      });
+  
+  }
+  $('.category').click(function () {
+      var self = this;
+      $('.category').each(function (_, item) {
+        if (self !== this) $(item).next().slideUp();
+      });
+      $(this).next().slideToggle(500);
+    });
+    return false
+  
+  });
+
+  
+  function view(){
+        var con = document.getElementById("side_bg");
+            if(con.style.visibility=="visible"){
+                con.style.visibility = 'hidden';
+            }
+            else{
+                con.style.visibility = 'visible';
+            }
+    }
+    var state = true;
+    function check(){
+      if (state)
+      {
+          $(".sidebar").css({ right: "0%" });
+      }else{
+          $(".sidebar").css({ right: "-100%" });
+      }
+      state = !state;
+    }
+
+    $(document).on('click', '#side_bg', function () {
+      $(".burger").click();
+      $('#side_bg').css({visibility:"hidden"});
+  }); 
+
+  </script>
+
+<div class="inner ">
+  <nav>
+    <ul>
+      <li class="nav_menu"><a href="index.html" class="active">OCARE</a></li>
+      <li class="nav_menu category">Air Conditioner</li>
+      <ul class="category-sub">
+        <a href="sub1_1.html">
+          <li>천정형 에어컨</li>
+        </a>
+        <a href="sub1_2.html">
+          <li>벽걸이 에어컨</li>
+        </a>
+        <a href="sub1_3.html">
+           <li>스탠드 에어컨</li>
+        </a>
+        <a href="sub1_4.html">
+          <li>실외기</li>
+         </a>
+      </ul>
+  
+      
+      <li class="nav_menu category">HOME CARE</li>
+      <ul class="category-sub">
+        <a href="sub2_1.html">
+          <li>매트리스</li>
+        </a>
+        <a href="sub2_2.html">
+          <li>소파</li>
+        </a>
+        <a href="sub2_3.html">
+          <li>카페트</li>
+          </a>
+        <a href="sub2_4.html">
+          <li>세탁기</li>
+        </a>
+        <a href="sub2_5.html">
+          <li>냉장고</li>
+        </a>
+        <a href="sub2_6.html">
+          <li>입주청소</li>
+        </a>
+      </ul>
+      <li class="nav_menu"><a href="sub3.html">Covid-19</a></li>
+      <li class="nav_menu"><a href="sub4.html">CONTACT US</a></li>
+    </ul>
+  </nav>
+
+</div>
+<div class="nav_address">
+  <img src="images/ocare_logo.png" alt="ocare_logo" style="width: 70px;"><br>
+  Copyright © 오케어 홈크린<br>All Rights Reserved.<br>
+  1600-0964
+</div>
